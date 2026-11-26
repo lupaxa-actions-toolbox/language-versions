@@ -126,19 +126,20 @@ def main(argv: list[str] | None = None) -> None:
         )
     except (VersionLookupError, InvalidVersion) as exc:
         parser.error(str(exc))
-    print(
-        format_report(
-            args.language,
-            args.min_version,
-            args.max_version,
-            versions,
-            include_prereleases=args.include_prereleases,
-            highest_only=args.highest_only,
-            remove_patch_version=args.remove_patch_version,
-            use_head=args.use_head,
-            max_versions=args.max_versions,
+    else:
+        print(
+            format_report(
+                args.language,
+                args.min_version,
+                args.max_version,
+                versions,
+                include_prereleases=args.include_prereleases,
+                highest_only=args.highest_only,
+                remove_patch_version=args.remove_patch_version,
+                use_head=args.use_head,
+                max_versions=args.max_versions,
+            )
         )
-    )
 
 
 if __name__ == "__main__":
