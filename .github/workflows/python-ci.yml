@@ -53,7 +53,7 @@ jobs:
     steps:
       - name: Get Python Versions
         id: get-versions
-        uses: lupaxa-actions-toolbox/get-language-versions@ba56d1892674d47d9b3a7e1a1819dda1c27f7dd3  # v0.1.4
+        uses: lupaxa-actions-toolbox/get-language-versions@7dda2912be25435b135d3b1b25eefe0b23801f2a  # v0.1.5
         with:
           language: python
           min-version: "3.11"
