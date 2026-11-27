@@ -5,12 +5,7 @@ from __future__ import annotations
 import pytest
 from packaging.version import parse as parse_version
 
-from lupaxa.language_versions.lookup import (
-    VersionLookupError,
-    extract_versions,
-    limit_versions,
-    select_versions,
-)
+from lupaxa.language_versions.lookup import VersionLookupError, extract_versions, limit_versions, select_versions
 
 
 def test_select_versions_keeps_highest_patch_in_range() -> None:
